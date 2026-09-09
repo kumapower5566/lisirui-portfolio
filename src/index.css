@@ -149,11 +149,34 @@ img {
 }
 
 .hero-heading {
-  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  background: linear-gradient(
+    115deg,
+    #646973 0%,
+    #98a3ad 18%,
+    #c6d1dc 34%,
+    #bccbdc 48%,
+    #c9b7e2 62%,
+    #a9c6d8 76%,
+    #646973 100%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  animation: hero-metal-sheen 9s linear infinite;
+}
+
+@keyframes hero-metal-sheen {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-heading {
+    animation: none;
+  }
 }
 
 .main-wrapper {
